@@ -48,7 +48,9 @@ function FormComponent() {
     const formValidator = () => {
 
         const regex = /[0-9]/;
-        if (colorName.length >= 2 && regex.test(colorCod) == true) {
+        const colorTrim = colorName.trim();
+        
+        if (colorName.length >= 3 && regex.test(colorCod) == true && colorCod.length >= 6) {
             setFormIsValid(true);
         } else {
 
