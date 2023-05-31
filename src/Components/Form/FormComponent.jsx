@@ -50,7 +50,7 @@ function FormComponent() {
         const regex = /[0-9]/;
         const colorTrim = colorName.trim();
         
-        if (colorName.length >= 3 && regex.test(colorCod) == true && colorCod.length >= 6) {
+        if (colorTrim.length >= 3 && regex.test(colorCod) == true && colorCod.length >= 6) {
             setFormIsValid(true);
         } else {
 
